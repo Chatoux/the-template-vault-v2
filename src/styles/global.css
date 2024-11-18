@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color palette */
+:root {
+  --color-primary: #383838;
+  --color-secondary: #F4F4F3;
+  --color-accent: #EC5C39;
+}
+
+/* Base styles */
+body {
+  @apply bg-secondary text-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-primary font-bold;
+}
+
+p {
+  @apply text-base;
+}
+
+a {
+  @apply text-accent;
+  transition: color 0.3s;
+}
+
+a:hover {
+  @apply text-primary;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-4 py-2 bg-accent text-white rounded;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  @apply bg-primary;
+}
+
+/* Text utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Link utilities */
+.link-primary {
+  color: var(--color-accent);
+  transition: color 0.3s;
+}
+
+.link-primary:hover {
+  color: var(--color-primary);
+}
+
+/* Spacing utilities */
+.spacing-sm {
+  @apply p-2 m-2;
+}
+
+.spacing-md {
+  @apply p-4 m-4;
+}
+
+.spacing-lg {
+  @apply p-6 m-6;
+}
+
+/* Responsive design breakpoints */
+@media (min-width: 640px) {
+  .text-responsive {
+    @apply text-lg;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-responsive {
+    @apply text-xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive {
+    @apply text-2xl;
+  }
+}
